@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Oluşturan Yapay Zeka</title>
+    <title>Yapay Zeka Video Oluştur</title>
     <style>
         /* Sayfa Stili */
         body {
@@ -18,10 +18,28 @@
             height: 100vh;
             flex-direction: column;
             text-align: center;
+            overflow: hidden;
+        }
+
+        /* Animasyonlu Şehir Arka Planı */
+        @keyframes slideBackground {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+        body {
+            background-image: url('https://example.com/city-background.jpg'); /* Burada şehri temsil eden görseli kullanın */
+            background-size: cover;
+            background-repeat: repeat-x;
+            animation: slideBackground 30s linear infinite;
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: rgba(76, 175, 80, 0.8);
             color: white;
             padding: 40px;
             border-radius: 8px;
