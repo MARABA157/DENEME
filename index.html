@@ -19,6 +19,7 @@
             flex-direction: column;
             text-align: center;
             overflow: hidden;
+            position: relative; /* Duyarlı tasarım için arka planın düzgün konumlanması */
         }
 
         /* Animasyonlu Şehir Arka Planı */
@@ -33,9 +34,9 @@
 
         body {
             background-image: url('https://example.com/city-background.jpg'); /* Burada şehri temsil eden görseli kullanın */
-            background-size: cover; /* Ekranı kaplayacak şekilde ölçeklendirilir */
+            background-size: cover; /* Ekranı tam olarak kaplar */
             background-repeat: no-repeat; /* Yalnızca bir kez tekrarlanır */
-            background-attachment: fixed; /* Arka planın sabit kalmasını sağlar */
+            background-attachment: fixed; /* Arka planın sabit olmasını sağlar */
             animation: slideBackground 30s linear infinite; /* Arka plan kayması animasyonu */
         }
 
