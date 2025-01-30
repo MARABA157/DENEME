@@ -6,59 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoşgeldiniz</title>
     <style>
-        /* Arka Plan Duvar Kağıdını Ayarlama */
+        /* Sayfa Stili */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://example.com/duvar-kagidi.jpg'); /* Burada görselin URL'sini kullanın */
-            background-size: cover; /* Görselin tüm ekranı kaplamasını sağlar */
-            background-position: center; /* Görseli ortalar */
-            color: #333;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
         }
 
         header {
-            background-color: rgba(76, 175, 80, 0.8); /* Yarı saydam yeşil */
+            background-color: #4CAF50;
             color: white;
-            text-align: center;
-            padding: 20px 0;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin-bottom: 40px;
         }
 
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        /* Ana Sayfa İçeriği */
         main {
-            text-align: center;
-            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .container {
             width: 80%;
-            margin: 0 auto;
+            max-width: 600px;
+        }
+
+        /* Animasyonlu Buton Stili */
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: #333;
+            transition: all 0.4s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+
+        .button:hover::before {
+            width: 0;
+            height: 0;
+            opacity: 1;
+        }
+
+        .button:hover {
+            background-color: #333;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .button span {
+            position: relative;
+            z-index: 1;
         }
 
         footer {
-            background-color: rgba(51, 51, 51, 0.8); /* Yarı saydam koyu gri */
+            margin-top: 50px;
+            background-color: #333;
             color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
+            padding: 10px;
             width: 100%;
         }
 
-        h1 {
-            font-size: 3em;
-        }
-
-        p {
-            font-size: 1.2em;
-        }
-
-        a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
@@ -70,10 +113,9 @@
 
     <main>
         <div class="container">
-            <h2>Bu benim basit ana sayfam.</h2>
-            <p>Burada web sitenizle ilgili bilgilere yer verebilirsiniz. GitHub Pages kullanarak kolayca bir site
-                oluşturabilirsiniz.</p>
-            <p>Daha fazla bilgi için <a href="https://github.com">GitHub</a> sayfasını ziyaret edebilirsiniz.</p>
+            <h2>Modern ve Animasyonlu Web Sayfası</h2>
+            <p>Bu sayfada animasyonlu butonları ve etkileyici bir tasarımı görebilirsiniz.</p>
+            <a href="#" class="button"><span>Başla</span></a>
         </div>
     </main>
 
