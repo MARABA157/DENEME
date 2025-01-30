@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoşgeldiniz</title>
+    <title>Video Oluşturan Yapay Zeka</title>
     <style>
         /* Sayfa Stili */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f0f0f0;
+            background: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -35,61 +35,36 @@
             margin: 0;
         }
 
-        /* Ana Sayfa İçeriği */
         main {
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        .container {
             width: 80%;
             max-width: 600px;
         }
 
-        /* Animasyonlu Buton Stili */
-        .button {
-            display: inline-block;
+        .container {
+            width: 100%;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        button {
             background-color: #4CAF50;
             color: white;
-            padding: 15px 30px;
             font-size: 1.2em;
-            text-decoration: none;
-            border-radius: 50px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 300%;
-            height: 300%;
-            background-color: #333;
-            transition: all 0.4s ease;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0;
-        }
-
-        .button:hover::before {
-            width: 0;
-            height: 0;
-            opacity: 1;
-        }
-
-        .button:hover {
-            background-color: #333;
-            color: #fff;
-            transform: scale(1.1);
-        }
-
-        .button span {
-            position: relative;
-            z-index: 1;
+        button:hover {
+            background-color: #45a049;
         }
 
         footer {
@@ -108,20 +83,42 @@
 
 <body>
     <header>
-        <h1>Hoşgeldiniz Web Siteme!</h1>
+        <h1>Yapay Zeka ile Video Oluştur</h1>
     </header>
 
     <main>
         <div class="container">
-            <h2>Modern ve Animasyonlu Web Sayfası</h2>
-            <p>Bu sayfada animasyonlu butonları ve etkileyici bir tasarımı görebilirsiniz.</p>
-            <a href="#" class="button"><span>Başla</span></a>
+            <h2>Videonuzu oluşturmak için metin girin:</h2>
+            <textarea id="videoText" rows="5" placeholder="Videonuzun içeriğini buraya yazın..."></textarea>
+            <button onclick="generateVideo()">Video Oluştur</button>
+        </div>
+        
+        <div id="videoResult" style="display:none;">
+            <h3>Videonuz Hazır!</h3>
+            <p>Yapay zeka videonuzu oluşturdu. Aşağıdaki linkten izleyebilirsiniz:</p>
+            <a href="#" id="videoLink" target="_blank">Videoyu Görüntüle</a>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Web Sitem - Tüm Hakları Saklıdır</p>
+        <p>&copy; 2025 Yapay Zeka Video Oluşturma - Tüm Hakları Saklıdır</p>
     </footer>
+
+    <script>
+        function generateVideo() {
+            const text = document.getElementById("videoText").value;
+
+            if (text.trim() === "") {
+                alert("Lütfen videonuz için bir içerik girin!");
+                return;
+            }
+
+            // Simülasyon: Yapay Zeka video oluşturuyor
+            document.getElementById("videoResult").style.display = "block";
+            const videoUrl = "https://example.com/generated_video.mp4"; // Burada yapay zeka video URL'si olmalı
+            document.getElementById("videoLink").href = videoUrl;
+        }
+    </script>
 </body>
 
 </html>
