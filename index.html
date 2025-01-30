@@ -33,9 +33,10 @@
 
         body {
             background-image: url('https://example.com/city-background.jpg'); /* Burada şehri temsil eden görseli kullanın */
-            background-size: cover;
-            background-repeat: repeat-x;
-            animation: slideBackground 30s linear infinite;
+            background-size: cover; /* Ekranı kaplayacak şekilde ölçeklendirilir */
+            background-repeat: no-repeat; /* Yalnızca bir kez tekrarlanır */
+            background-attachment: fixed; /* Arka planın sabit kalmasını sağlar */
+            animation: slideBackground 30s linear infinite; /* Arka plan kayması animasyonu */
         }
 
         header {
