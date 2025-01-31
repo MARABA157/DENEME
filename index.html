@@ -1,144 +1,80 @@
 <!DOCTYPE html>
-<html lang="tr">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yapay Zeka Video Oluştur</title>
-    <style>
-        /* Sayfa Stili */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            text-align: center;
-            overflow: hidden;
-            position: relative; /* Duyarlı tasarım için arka planın düzgün konumlanması */
-        }
+  <title>Anasayfa</title>
+  <style>
+    /* Add your custom CSS styles here */
+    body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+    }
 
-        /* Animasyonlu Şehir Arka Planı */
-        @keyframes slideBackground {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: 100% 0;
-            }
-        }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-        body {
-            background-image: url('https://example.com/city-background.jpg'); /* Burada şehri temsil eden görseli kullanın */
-            background-size: cover; /* Ekranı tam olarak kaplar */
-            background-repeat: no-repeat; /* Yalnızca bir kez tekrarlanır */
-            background-attachment: fixed; /* Arka planın sabit olmasını sağlar */
-            animation: slideBackground 30s linear infinite; /* Arka plan kayması animasyonu */
-        }
+    .header {
+      text-align: center;
+      padding: 20px;
+    }
 
-        header {
-            background-color: rgba(76, 175, 80, 0.8);
-            color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            margin-bottom: 40px;
-        }
+    .chatbot {
+      margin-top: 20px;
+      text-align: center;
+    }
 
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
+    .image-creation-ai, .video-creation-ai {
+      margin-top: 20px;
+      text-align: center;
+    }
 
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 80%;
-            max-width: 600px;
-        }
-
-        .container {
-            width: 100%;
-        }
-
-        input, textarea, button {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        footer {
-            margin-top: 50px;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            width: 100%;
-        }
-
-        footer p {
-            margin: 0;
-        }
-    </style>
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f2f2f2;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
-
 <body>
-    <header>
-        <h1>Yapay Zeka ile Video Oluştur</h1>
-    </header>
+  <div class="container">
+    <div class="header">
+      <h1>Anasayfa</h1>
+    </div>
 
-    <main>
-        <div class="container">
-            <h2>Videonuzu oluşturmak için metin girin:</h2>
-            <textarea id="videoText" rows="5" placeholder="Videonuzun içeriğini buraya yazın..."></textarea>
-            <button onclick="generateVideo()">Video Oluştur</button>
-        </div>
-        
-        <div id="videoResult" style="display:none;">
-            <h3>Videonuz Hazır!</h3>
-            <p>Yapay zeka videonuzu oluşturdu. Aşağıdaki linkten izleyebilirsiniz:</p>
-            <a href="#" id="videoLink" target="_blank">Videoyu Görüntüle</a>
-        </div>
-    </main>
+    <div class="chatbot">
+      <!-- Add your chatbot implementation here -->
+      <h2>Yapay Zeka Sohbeti</h2>
+      <iframe src="chatbot.html" width="300" height="400"></iframe>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Yapay Zeka Video Oluşturma - Tüm Hakları Saklıdır</p>
-    </footer>
+    <div class="image-creation-ai">
+      <!-- Add your image creation AI implementation here -->
+      <h2>Resim Oluşturma Yapay Zekası</h2>
+      <form action="image_creation_ai.php" method="post">
+        <input type="text" name="prompt" placeholder="Resim açıklaması girin">
+        <input type="submit" value="Oluştur">
+      </form>
+    </div>
 
-    <script>
-        function generateVideo() {
-            const text = document.getElementById("videoText").value;
+    <div class="video-creation-ai">
+      <!-- Add your video creation AI implementation here -->
+      <h2>Video Oluşturma Yapay Zekası</h2>
+      <form action="video_creation_ai.php" method="post">
+        <input type="text" name="prompt" placeholder="Video açıklaması girin">
+        <input type="submit" value="Oluştur">
+      </form>
+    </div>
 
-            if (text.trim() === "") {
-                alert("Lütfen videonuz için bir içerik girin!");
-                return;
-            }
-
-            // Simülasyon: Yapay Zeka video oluşturuyor
-            document.getElementById("videoResult").style.display = "block";
-            const videoUrl = "https://example.com/generated_video.mp4"; // Burada yapay zeka video URL'si olmalı
-            document.getElementById("videoLink").href = videoUrl;
-        }
-    </script>
+    <div class="footer">
+      <p>Copyright © 2022 Your Name. All rights reserved.</p>
+    </div>
+  </div>
 </body>
-
 </html>
