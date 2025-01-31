@@ -1,80 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-  <title>Ana Sayfa</title>
-  <style>
-    /* Özel CSS stillerinizi buraya ekleyin */
-    body {
-      background-image: url('arkaplan.jpg');
-      background-size: cover;
-      background-attachment: fixed;
-      font-family: Arial, sans-serif;
-    }
-
-    .kapsayici {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .ust-bilgi {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .sohbet-botu {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .resim-olusturma-ai, .video-olusturma-ai {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f2f2f2;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Açıklama girin">
+    <meta name="author" content="Adınız">
+    <title>Modern Anasayfa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="kapsayici">
-    <div class="ust-bilgi">
-      <h1>Ana Sayfa</h1>
-    </div>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="#">LOGO</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Anasayfa</a></li>
+            <li><a href="#">Hizmetler</a></li>
+            <li><a href="#">Projeler</a></li>
+            <li><a href="#">İletişim</a></li>
+        </ul>
+        <div class="menu-icon" id="menu-icon">
+            <span>&#9776;</span>
+        </div>
+    </nav>
 
-    <div class="sohbet-botu">
-      <!-- Sohbet botunuzu ekleyin -->
-      <h2>Yapay Zeka Sohbeti</h2>
-      <iframe src="sohbet_botu.html" width="300" height="400"></iframe>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hoş Geldiniz!</h1>
+            <p>En iyi çözümler burada, hemen keşfedin!</p>
+            <a href="#hizmetler" class="cta-button">Başlamak</a>
+        </div>
+    </section>
 
-    <div class="resim-olusturma-ai">
-      <!-- Resim oluşturma AI'nizi ekleyin -->
-      <h2>Resim Oluşturma Yapay Zekası</h2>
-      <form action="resim_olusturma_ai.php" method="post">
-        <input type="text" name="aciklama" placeholder="Resmin açıklamasını girin">
-        <input type="submit" value="Oluştur">
-      </form>
-    </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Hakkımızda</h2>
+            <p>
+                Biz, sektördeki en iyi deneyimi sunmak için çalışan bir ekibiz. Yıllardır kaliteli hizmet sunuyor ve müşterilerimizin beklentilerini karşılıyoruz.
+            </p>
+        </div>
+    </section>
 
-    <div class="video-olusturma-ai">
-      <!-- Video oluşturma AI'nizi ekleyin -->
-      <h2>Video Oluşturma Yapay Zekası</h2>
-      <form action="video_olusturma_ai.php" method="post">
-        <input type="text" name="aciklama" placeholder="Videonun açıklamasını girin">
-        <input type="submit" value="Oluştur">
-      </form>
-    </div>
+    <!-- Services Section -->
+    <section id="hizmetler" class="services">
+        <div class="container">
+            <h2>Hizmetlerimiz</h2>
+            <div class="service-items">
+                <div class="service-item">
+                    <h3>Web Tasarımı</h3>
+                    <p>Modern ve duyarlı web tasarımları sunuyoruz.</p>
+                </div>
+                <div class="service-item">
+                    <h3>SEO Optimizasyonu</h3>
+                    <p>Web sitenizin görünürlüğünü artırıyoruz.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Yazılım Geliştirme</h3>
+                    <p>İhtiyacınıza özel yazılımlar geliştiriyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="footer">
-      <p>Telif Hakkı © 2022 İsiminiz. Tüm hakları saklıdır.</p>
-    </div>
-  </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>İletişime Geçin</h2>
+            <form action="#">
+                <input type="text" name="name" placeholder="Adınız" required>
+                <input type="email" name="email" placeholder="E-posta" required>
+                <textarea name="message" placeholder="Mesajınız" required></textarea>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Şirket Adı. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
 </body>
 </html>
