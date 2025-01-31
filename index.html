@@ -3,37 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yanıp Sönen Buton</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #222;
-        }
-
-        .flash-button {
-            font-size: 2rem;
-            padding: 20px 40px;
-            border: none;
-            background-color: #ffcc00;
-            color: #000;
-            border-radius: 10px;
-            cursor: pointer;
-            text-align: center;
-            animation: flash 1s infinite alternate;
-        }
-
-        @keyframes flash {
-            0% { opacity: 1; }
-            100% { opacity: 0.3; }
-        }
-    </style>
+    <title>Şehir Teması</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Şehir Manzarası</h1>
+        <button id="toggleMode">🌙</button>
+    </header>
 
-    <button class="flash-button">✨ Tıkla! ✨</button>
+    <section class="city-container">
+        <div class="city"></div>
+        <h2>Hoş Geldiniz</h2>
+        <p>Şehirlerin fısıltısını hissedin, satırlara dökün...</p>
+    </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
