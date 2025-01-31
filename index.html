@@ -1,3 +1,20 @@
+import { motion } from 'framer-motion';
+import { AIArtSection } from '@/components/home/AIArtSection';
+import { TrendingArtworks } from '@/components/home/TrendingArtworks';
+import { FeaturedCollections } from '@/components/home/FeaturedCollections';
+import { Hero } from '@/components/home/Hero';
+
+export default function Home() {
+  return (
+    <div className="space-y-16">
+      <Hero />
+      <AIArtSection />
+      <TrendingArtworks />
+      <FeaturedCollections />
+    </div>
+  );
+}
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
