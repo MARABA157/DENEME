@@ -1,169 +1,39 @@
-import { motion } from 'framer-motion';
-import { AIArtSection } from '@/components/home/AIArtSection';
-import { TrendingArtworks } from '@/components/home/TrendingArtworks';
-import { FeaturedCollections } from '@/components/home/FeaturedCollections';
-import { Hero } from '@/components/home/Hero';
-
-export default function Home() {
-  return (
-    <div className="space-y-16">
-      <Hero />
-      <AIArtSection />
-      <TrendingArtworks />
-      <FeaturedCollections />
-    </div>
-  );
-}
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Açıklama girin">
-    <meta name="author" content="Adınız">
-    <title>Modern Anasayfa</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <title>Yanıp Sönen Buton</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+        }
+
+        .flash-button {
+            font-size: 2rem;
+            padding: 20px 40px;
+            border: none;
+            background-color: #ffcc00;
+            color: #000;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            animation: flash 1s infinite alternate;
+        }
+
+        @keyframes flash {
+            0% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav>
-        <div class="logo">
-            <a href="#">LOGO</a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Anasayfa</a></li>
-            <li><a href="#">Hizmetler</a></li>
-            <li><a href="#">Projeler</a></li>
-            <li><a href="#">İletişim</a></li>
-        </ul>
-        <div class="menu-icon" id="menu-icon">
-            <span>&#9776;</span>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Hoş Geldiniz!</h1>
-            <p>En iyi çözümler burada, hemen keşfedin!</p>
-            <a href="#hizmetler" class="cta-button">Başlamak</a>
-        </div>
-    </section>
+    <button class="flash-button">✨ Tıkla! ✨</button>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Hakkımızda</h2>
-            <p>
-                Biz, sektördeki en iyi deneyimi sunmak için çalışan bir ekibiz. Yıllardır kaliteli hizmet sunuyor ve müşterilerimizin beklentilerini karşılıyoruz.
-            </p>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="hizmetler" class="services">
-        <div class="container">
-            <h2>Hizmetlerimiz</h2>
-            <div class="service-items">
-                <div class="service-item">
-                    <h3>Web Tasarımı</h3>
-                    <p>Modern ve duyarlı web tasarımları sunuyoruz.</p>
-                </div>
-                <div class="service-item">
-                    <h3>SEO Optimizasyonu</h3>
-                    <p>Web sitenizin görünürlüğünü artırıyoruz.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Yazılım Geliştirme</h3>
-                    <p>İhtiyacınıza özel yazılımlar geliştiriyoruz.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- Yapay Zeka AI Bölümü -->
-<section id="ai" class="ai">
-    <div class="container">
-        <h2>Yapay Zeka (AI)</h2>
-        <p>Yapay zeka ile görüntü, video ve metin içerikleri oluşturun! İşte bazı örnekler:</p>
-    </div>
-</section>
-
-<!-- AI Görsel Promptları -->
-<section id="ai-image" class="ai-image">
-    <div class="container">
-        <h2>Yapay Zeka Görsel (Image) Promptları</h2>
-        <div class="prompt-items">
-            <div class="prompt-item">
-                <img src="ai-image1.jpg" alt="AI Cyberpunk City">
-                <h3>Fütüristik Şehir</h3>
-                <p>“A futuristic cyberpunk city at night, neon lights, flying cars, high-tech buildings, ultra HD.”</p>
-            </div>
-            <div class="prompt-item">
-                <img src="ai-image2.jpg" alt="AI Enchanted Forest">
-                <h3>Fantastik Orman</h3>
-                <p>“A magical enchanted forest with glowing mushrooms and fairy lights, highly detailed.”</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- AI Video Promptları -->
-<section id="ai-video" class="ai-video">
-    <div class="container">
-        <h2>Yapay Zeka Video Promptları</h2>
-        <div class="prompt-items">
-            <div class="prompt-item">
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                <h3>Sinema Kalitesinde Bilim Kurgu</h3>
-                <p>“A cinematic sci-fi short film, a futuristic hero fights robots in a neon city, 4K, ultra-realistic.”</p>
-            </div>
-            <div class="prompt-item">
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/3JZ_D3ELwOQ" frameborder="0" allowfullscreen></iframe>
-                <h3>Anime Stili Dövüş Sahnesi</h3>
-                <p>“Epic anime-style battle between a samurai and a cyber ninja, dynamic camera angles.”</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- AI Video Promptları -->
-<section id="ai-video" class="ai-video">
-    <div class="container">
-        <h2>Yapay Zeka Video Promptları</h2>
-        <div class="prompt-items">
-            <div class="prompt-item">
-                <h3>Sinema Kalitesinde Bilim Kurgu</h3>
-                <p>“A cinematic sci-fi short film, a futuristic hero fights robots in a neon city, 4K, ultra-realistic.”</p>
-            </div>
-            <div class="prompt-item">
-                <h3>Anime Stili Dövüş Sahnesi</h3>
-                <p>“Epic anime-style battle between a samurai and a cyber ninja, dynamic camera angles.”</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>İletişime Geçin</h2>
-            <form action="#">
-                <input type="text" name="name" placeholder="Adınız" required>
-                <input type="email" name="email" placeholder="E-posta" required>
-                <textarea name="message" placeholder="Mesajınız" required></textarea>
-                <button type="submit">Gönder</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Şirket Adı. Tüm Hakları Saklıdır.</p>
-        </div>
-    </footer>
 </body>
 </html>
