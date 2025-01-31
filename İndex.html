@@ -12,11 +12,6 @@
             color: #fff;
             text-align: center;
             padding: 20px;
-            transition: background-color 0.5s, color 0.5s;
-        }
-        .dark-mode {
-            background-color: #333;
-            color: #fff;
         }
         .button {
             display: inline-block;
@@ -110,46 +105,6 @@
         .social-media a:hover {
             transform: scale(1.2);
         }
-        .gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-        .gallery img {
-            max-width: 200px;
-            margin: 10px;
-            border: 2px solid #fff;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        .gallery img:hover {
-            transform: scale(1.1);
-        }
-        .map {
-            margin-top: 30px;
-        }
-        .map iframe {
-            width: 100%;
-            max-width: 600px;
-            height: 400px;
-            border: none;
-            border-radius: 10px;
-        }
-        .theme-toggle {
-            cursor: pointer;
-            padding: 10px;
-            margin-top: 20px;
-            border: 2px solid #fff;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            font-size: 18px;
-            transition: background-color 0.3s;
-        }
-        .theme-toggle:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
     </style>
 </head>
 <body>
@@ -193,37 +148,10 @@
         <a href="https://www.instagram.com" target="_blank">Instagram</a>
     </div>
 
-    <div class="gallery">
-        <h2>Galeri</h2>
-        <img src="image1.jpg" alt="Image 1">
-        <img src="image2.jpg" alt="Image 2">
-        <img src="image3.jpg" alt="Image 3">
-    </div>
-
-    <div class="map">
-        <h2>Harita</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509437!2d144.9631579153157!3d-37.81627967975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727f1ad462f6e8!2sFederation+Square!5e0!3m2!1sen!2sau!4v1510912086166" allowfullscreen></iframe>
-    </div>
-
-    <div class="section">
-        <h2>Canlı Sohbet</h2>
-        <div id="chat-box" style="height: 200px; overflow-y: scroll; border: 2px solid #fff; border-radius: 10px; padding: 10px; margin-top: 10px;">
-            <p><strong>Kullanıcı:</strong> Merhaba!</p>
-            <p><strong>Destek:</strong> Merhaba! Size nasıl yardımcı olabilirim?</p>
-        </div>
-        <input type="text" id="chat-input" class="form-input" placeholder="Mesajınızı yazın...">
-        <button class="form-button" onclick="sendMessage()">Gönder</button>
-    </div>
-
-    <button class="theme-toggle" onclick="toggleTheme()">Tema Değiştir</button>
-
     <script>
         function generateVideo() {
             alert('Yeni video üretme işlemi başlatıldı!');
         }
-
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
-        }
-
-        function sendMessage()
+    </script>
+</body>
+</html>
