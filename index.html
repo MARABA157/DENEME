@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Anasayfa</title>
+  <title>Ana Sayfa</title>
   <style>
-    /* Add your custom CSS styles here */
+    /* Özel CSS stillerinizi buraya ekleyin */
     body {
-      background-image: url('background.jpg');
+      background-image: url('arkaplan.jpg');
       background-size: cover;
       background-attachment: fixed;
       font-family: Arial, sans-serif;
     }
 
-    .container {
+    .kapsayici {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
     }
 
-    .header {
+    .ust-bilgi {
       text-align: center;
       padding: 20px;
     }
 
-    .chatbot {
+    .sohbet-botu {
       margin-top: 20px;
       text-align: center;
     }
 
-    .image-creation-ai, .video-creation-ai {
+    .resim-olusturma-ai, .video-olusturma-ai {
       margin-top: 20px;
       text-align: center;
     }
@@ -43,37 +43,37 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>Anasayfa</h1>
+  <div class="kapsayici">
+    <div class="ust-bilgi">
+      <h1>Ana Sayfa</h1>
     </div>
 
-    <div class="chatbot">
-      <!-- Add your chatbot implementation here -->
+    <div class="sohbet-botu">
+      <!-- Sohbet botunuzu ekleyin -->
       <h2>Yapay Zeka Sohbeti</h2>
-      <iframe src="chatbot.html" width="300" height="400"></iframe>
+      <iframe src="sohbet_botu.html" width="300" height="400"></iframe>
     </div>
 
-    <div class="image-creation-ai">
-      <!-- Add your image creation AI implementation here -->
+    <div class="resim-olusturma-ai">
+      <!-- Resim oluşturma AI'nizi ekleyin -->
       <h2>Resim Oluşturma Yapay Zekası</h2>
-      <form action="image_creation_ai.php" method="post">
-        <input type="text" name="prompt" placeholder="Resim açıklaması girin">
+      <form action="resim_olusturma_ai.php" method="post">
+        <input type="text" name="aciklama" placeholder="Resmin açıklamasını girin">
         <input type="submit" value="Oluştur">
       </form>
     </div>
 
-    <div class="video-creation-ai">
-      <!-- Add your video creation AI implementation here -->
+    <div class="video-olusturma-ai">
+      <!-- Video oluşturma AI'nizi ekleyin -->
       <h2>Video Oluşturma Yapay Zekası</h2>
-      <form action="video_creation_ai.php" method="post">
-        <input type="text" name="prompt" placeholder="Video açıklaması girin">
+      <form action="video_olusturma_ai.php" method="post">
+        <input type="text" name="aciklama" placeholder="Videonun açıklamasını girin">
         <input type="submit" value="Oluştur">
       </form>
     </div>
 
     <div class="footer">
-      <p>Copyright © 2022 Your Name. All rights reserved.</p>
+      <p>Telif Hakkı © 2022 İsiminiz. Tüm hakları saklıdır.</p>
     </div>
   </div>
 </body>
