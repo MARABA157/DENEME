@@ -3,54 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Şehir Rehberi</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Yapay Zeka Promptu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        .prompt-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            position: relative;
+        }
+        .prompt-text {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .copy-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .copy-btn:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Şehir Rehberi</h1>
-        <nav>
-            <ul>
-                <li><a href="#hakkinda">Hakkında</a></li>
-                <li><a href="#gezilecek-yerler">Gezilecek Yerler</a></li>
-                <li><a href="#yemekler">Yemekler</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="hakkinda">
-            <h2>Hakkında</h2>
-            <p>Bu şehir, tarihi ve kültürel zenginlikleri ile ünlüdür. Ziyaretçilere birçok farklı deneyim sunmaktadır.</p>
-        </section>
+    <h1>🚀 Yapay Zeka Promptu</h1>
+    <div class="prompt-box">
+        <p class="prompt-text" id="prompt">"Bir yapay zeka ile sohbet ediyorsun. Ona yaratıcı bir hikaye yazmasını söyle!"</p>
+        <button class="copy-btn" onclick="copyPrompt()">Kopyala</button>
+    </div>
 
-        <section id="gezilecek-yerler">
-            <h2>Gezilecek Yerler</h2>
-            <ul>
-                <li>Tarihi Kale</li>
-                <li>Şehir Müzesi</li>
-                <li>Botanik Bahçesi</li>
-            </ul>
-        </section>
+    <script>
+        function copyPrompt() {
+            var promptText = document.getElementById("prompt").innerText;
+            navigator.clipboard.writeText(promptText).then(() => {
+                alert("Prompt kopyalandı!");
+            });
+        }
+    </script>
 
-        <section id="yemekler">
-            <h2>Yemekler</h2>
-            <p>Bu bir yapay zeka platformudut.</p>
-        </section>
-
-<h2>🚀 Yapay Zeka Promptu</h2>
-<p>Yapay zekaya aşağıdaki komutu vererek hemen denemeye başlayabilirsin:</p>
-<pre>Yapay zeka kullanarak bir şiir yaz.</pre>
-
-        <section id="iletisim">
-            <h2>İletişim</h2>
-            <p>Bize ulaşmak için <a href="mailto:info@sehirrehberi.com">info@sehirrehberi.com</a> adresine e-posta gönderebilirsiniz.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Şehir Rehberi. Tüm hakları saklıdır.</p>
-    </footer>
 </body>
 </html>
