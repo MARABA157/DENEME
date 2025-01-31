@@ -3,91 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Şehir Teması</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Şehir Rehberi</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Şehir Manzarası</h1>
-        <button id="toggleMode">🌙</button>
+        <h1>Şehir Rehberi</h1>
+        <nav>
+            <ul>
+                <li><a href="#hakkinda">Hakkında</a></li>
+                <li><a href="#gezilecek-yerler">Gezilecek Yerler</a></li>
+                <li><a href="#yemekler">Yemekler</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="city-container">
-        <div class="city"></div>
-        <h2>Hoş Geldiniz</h2>
-        <p>Şehirlerin fısıltısını hissedin, satırlara dökün...</p>
-    </section>
+    <main>
+        <section id="hakkinda">
+            <h2>Hakkında</h2>
+            <p>Bu şehir, tarihi ve kültürel zenginlikleri ile ünlüdür. Ziyaretçilere birçok farklı deneyim sunmaktadır.</p>
+        </section>
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        <section id="gezilecek-yerler">
+            <h2>Gezilecek Yerler</h2>
+            <ul>
+                <li>Tarihi Kale</li>
+                <li>Şehir Müzesi</li>
+                <li>Botanik Bahçesi</li>
+            </ul>
+        </section>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+        <section id="yemekler">
+            <h2>Yemekler</h2>
+            <p>Şehrin meşhur yemekleri arasında kebap, dolma ve baklava bulunmaktadır.</p>
+        </section>
 
-body {
-    background: linear-gradient(to bottom, #1e3c72, #2a5298);
-    color: white;
-    text-align: center;
-    transition: background 0.5s ease-in-out;
-}
+        <section id="iletisim">
+            <h2>İletişim</h2>
+            <p>Bize ulaşmak için <a href="mailto:info@sehirrehberi.com">info@sehirrehberi.com</a> adresine e-posta gönderebilirsiniz.</p>
+        </section>
+    </main>
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-button {
-    font-size: 1.2rem;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    background: white;
-    color: black;
-    border-radius: 5px;
-}
-
-.city-container {
-    position: relative;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.city {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 40vh;
-    background: url('https://source.unsplash.com/1600x900/?city,night') no-repeat center/cover;
-    opacity: 0.8;
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1.2rem;
-}
-
-/* Gece Modu */
-.dark-mode {
-    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-}
-
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2023 Şehir Rehberi. Tüm hakları saklıdır.</p>
+    </footer>
 </body>
 </html>
