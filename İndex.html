@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Üreten Yapay Zeka</title>
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: 2px solid #fff;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .video {
+            width: 100%;
+            max-width: 600px;
+            border: 5px solid #fff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Video Üreten Yapay Zeka</h1>
+    <div class="video-container">
+        <video class="video" controls>
+            <source src="your_video.mp4" type="video/mp4">
+            Tarayıcınız video etiketini desteklemiyor.
+        </video>
+        <button class="button" onclick="generateVideo()">Yeni Video Üret</button>
+    </div>
+    <script>
+        function generateVideo() {
+            alert('Yeni video üretme işlemi başlatıldı!');
+        }
+    </script>
+</body>
+</html>
