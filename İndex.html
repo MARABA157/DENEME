@@ -1,157 +1,26 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Üreten Yapay Zeka</title>
-    <style>
-        body {
-            background-image: url('background.jpg');
-            background-size: cover;
-            font-family: Arial, sans-serif;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 20px;
-            margin: 20px;
-            cursor: pointer;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            border: 2px solid #fff;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-            transform: scale(1.1);
-        }
-        .video-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-bottom: 30px;
-        }
-        .video {
-            width: 100%;
-            max-width: 600px;
-            border: 5px solid #fff;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .section {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 30px;
-        }
-        .file-input {
-            margin-top: 10px;
-            display: inline-block;
-        }
-        .form-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 30px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-input {
-            padding: 10px;
-            width: 100%;
-            max-width: 300px;
-            border: 1px solid #fff;
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #fff;
-        }
-        .form-input::placeholder {
-            color: #ccc;
-        }
-        .form-button {
-            padding: 10px 20px;
-            font-size: 18px;
-            margin-top: 10px;
-            cursor: pointer;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            border: 2px solid #fff;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .form-button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-            transform: scale(1.1);
-        }
-        .social-media {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        .social-media a {
-            margin: 0 10px;
-            color: #fff;
-            font-size: 30px;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-        .social-media a:hover {
-            transform: scale(1.2);
-        }
-    </style>
-</head>
-<body>
-    <h1>Video Üreten Yapay Zeka</h1>
-    <div class="video-container">
-        <video class="video" controls>
-            <source src="your_video.mp4" type="video/mp4">
-            Tarayıcınız video etiketini desteklemiyor.
-        </video>
-        <button class="button" onclick="generateVideo()">Yeni Video Üret</button>
-    </div>
+import random
 
-    <div class="section">
-        <h2>Video Yükleyici</h2>
-        <input type="file" class="file-input" accept="video/*">
-        <button class="button">Videoyu Yükle</button>
-    </div>
+def sayi_tahmin_oyunu():
+    print("Sayı Tahmin Oyununa Hoş Geldiniz!")
+    gizli_sayi = random.randint(1, 100)
+    tahmin_hakki = 10
 
-    <div class="section">
-        <h2>Bilgilendirici İçerik</h2>
-        <p>Bu sayfada, yapay zeka kullanarak videolar üretebilir ve yükleyebilirsiniz. Ayrıca, videolarınızı paylaşarak diğer kullanıcılarla etkileşimde bulunabilirsiniz.</p>
-    </div>
+    while tahmin_hakki > 0:
+        tahmin = int(input("1 ile 100 arasında bir sayı tahmin edin: "))
+        
+        if tahmin < gizli_sayi:
+            print("Daha yüksek bir sayı tahmin edin.")
+        elif tahmin > gizli_sayi:
+            print("Daha düşük bir sayı tahmin edin.")
+        else:
+            print("Tebrikler! Doğru tahmin ettiniz!")
+            break
+        
+        tahmin_hakki -= 1
+        print(f"Kalan tahmin hakkı: {tahmin_hakki}")
 
-    <div class="form-container">
-        <h2>Geri Bildirim Formu</h2>
-        <div class="form-group">
-            <input type="text" class="form-input" placeholder="Adınız">
-        </div>
-        <div class="form-group">
-            <input type="email" class="form-input" placeholder="E-posta Adresiniz">
-        </div>
-        <div class="form-group">
-            <textarea class="form-input" placeholder="Geri Bildiriminiz" rows="4"></textarea>
-        </div>
-        <button class="form-button">Gönder</button>
-    </div>
-
-    <div class="social-media">
-        <a href="https://www.facebook.com" target="_blank">Facebook</a>
-        <a href="https://www.twitter.com" target="_blank">Twitter</a>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-    </div>
-
-    <script>
-        function generateVideo() {
-            alert('Yeni video üretme işlemi başlatıldı!');
-        }
-    </script>
-</body>
-</html>
+    if tahmin_hakki == 0:
+        print(f"Maalesef, tahmin hakkınız bitti. Gizli sayı {gizli_sayi} idi.")
+        
+# Oyunu başlat
+sayi_tahmin_oyunu()
